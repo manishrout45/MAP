@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <section className="relative w-full bg-white overflow-hidden">
+    <section className="relative w-full bg-white overflow-hidden py-8">
       {/* ================= TOP CONTENT ================= */}
       <div className="max-w-7xl mx-auto px-6 pb-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div>

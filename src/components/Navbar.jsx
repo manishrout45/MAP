@@ -12,7 +12,7 @@ export default function Navbar() {
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [mobilePagesOpen, setMobilePagesOpen] = useState(false);
 
-  const location = useLocation(); // ✅ Active route
+  const location = useLocation();
 
   const menu = ["Home", "Services", "Pages", "Blog", "Contact"];
 
@@ -33,7 +33,6 @@ export default function Navbar() {
     { name: "FAQ", path: "/faq" },
   ];
 
-  // Scroll Detect
   useEffect(() => {
     const handleScroll = () => {
       if (window.innerWidth >= 1024) {
@@ -52,12 +51,12 @@ export default function Navbar() {
       <header className="fixed top-0 left-0 w-full z-50">
         <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
 
-          {/* LOGO (Changed on Scroll) */}
+          {/* LOGO */}
           <Link to="/">
             <img
               src={
                 scrolled
-                  ? "/assets/images/logo/final.png" // 👈 Scroll Logo
+                  ? "/assets/images/logo/final.png"
                   : "/assets/images/logo/finalww.png"
               }
               alt="Logo"
@@ -77,13 +76,7 @@ export default function Navbar() {
             {menu.map((item, i) =>
               item === "Services" ? (
                 <div key={i} className="relative group">
-                  <button
-                    className={`flex items-center gap-1 hover:text-orange-500 ${
-                      location.pathname.startsWith("/services")
-                        ? "text-orange-500 font-semibold"
-                        : ""
-                    }`}
-                  >
+                  <button className="flex items-center gap-1 hover:text-orange-500">
                     Services <FiChevronDown size={14} />
                   </button>
 
@@ -110,13 +103,7 @@ export default function Navbar() {
                 </div>
               ) : item === "Pages" ? (
                 <div key={i} className="relative group">
-                  <button
-                    className={`flex items-center gap-1 hover:text-orange-500 ${
-                      pagesMenu.some((p) => isActive(p.path))
-                        ? "text-orange-500 font-semibold"
-                        : ""
-                    }`}
-                  >
+                  <button className="flex items-center gap-1 hover:text-orange-500">
                     Pages <FiChevronDown size={14} />
                   </button>
 
@@ -167,7 +154,7 @@ export default function Navbar() {
             )}
           </nav>
 
-          {/* RIGHT BUTTON */}
+          {/* RIGHT SIDE */}
           <div className="flex items-center gap-4">
             <button
               className={`hidden lg:block px-5 py-2 rounded-full border text-sm
@@ -220,6 +207,102 @@ export default function Navbar() {
             >
               Home
             </Link>
+
+            {/* SERVICES ACCORDION */}
+            <div className="border-b pb-3">
+              <button
+                onClick={() => {
+                  setMobileServicesOpen(!mobileServicesOpen);
+                  setMobilePagesOpen(false); // auto close pages
+                }}
+                className="flex justify-between items-center w-full"
+              >
+                <span
+                  className={
+                    servicesMenu.some((s) => isActive(s.path))
+                      ? "text-orange-500 font-semibold"
+                      : ""
+                  }
+                >
+                  Services
+                </span>
+                <FiChevronDown
+                  className={`transition-transform ${
+                    mobileServicesOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {mobileServicesOpen && (
+                <div className="mt-3 ml-4 space-y-2">
+                  {servicesMenu.map((s, idx) => (
+                    <Link
+                      key={idx}
+                      to={s.path}
+                      onClick={() => {
+                        setOpen(false);
+                        setMobileServicesOpen(false);
+                      }}
+                      className={`block text-sm ${
+                        isActive(s.path)
+                          ? "text-orange-500 font-semibold"
+                          : "text-gray-600"
+                      }`}
+                    >
+                      {s.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* PAGES ACCORDION */}
+            <div className="border-b pb-3">
+              <button
+                onClick={() => {
+                  setMobilePagesOpen(!mobilePagesOpen);
+                  setMobileServicesOpen(false); // auto close services
+                }}
+                className="flex justify-between items-center w-full"
+              >
+                <span
+                  className={
+                    pagesMenu.some((p) => isActive(p.path))
+                      ? "text-orange-500 font-semibold"
+                      : ""
+                  }
+                >
+                  Pages
+                </span>
+                <FiChevronDown
+                  className={`transition-transform ${
+                    mobilePagesOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {mobilePagesOpen && (
+                <div className="mt-3 ml-4 space-y-2">
+                  {pagesMenu.map((p, idx) => (
+                    <Link
+                      key={idx}
+                      to={p.path}
+                      onClick={() => {
+                        setOpen(false);
+                        setMobilePagesOpen(false);
+                      }}
+                      className={`block text-sm ${
+                        isActive(p.path)
+                          ? "text-orange-500 font-semibold"
+                          : "text-gray-600"
+                      }`}
+                    >
+                      {p.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             <Link
               to="/blog"

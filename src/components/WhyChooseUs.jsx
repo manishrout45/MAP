@@ -69,7 +69,7 @@ export default function WhyChooseUs() {
               sm:w-[320px] sm:h-[320px]
               md:w-[380px] md:h-[380px]
               lg:w-[420px] lg:h-[420px]
-              rounded-full bg-gradient-to-br from-pink-400 via-purple-500 to-blue-500
+              rounded-full bg-gradient-to-br from-[#14213D] via-[#2b4aa5] to-[#1F3C88]
               flex items-center justify-center
             "
             >
@@ -126,7 +126,7 @@ export default function WhyChooseUs() {
               sm:w-[320px] sm:h-[320px]
               md:w-[380px] md:h-[380px]
               lg:w-[420px] lg:h-[420px]
-              rounded-full bg-gradient-to-br from-pink-400 via-purple-500 to-blue-500
+              rounded-full bg-gradient-to-br from-[#1F3C88] via-[#2b4aa5] to-[#14213D]
               flex items-center justify-center
             "
             >

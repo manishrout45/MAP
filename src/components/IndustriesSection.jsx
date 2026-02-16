@@ -53,7 +53,7 @@ export default function IndustriesSection() {
       <div className="relative max-w-7xl mx-auto">
 
         {/* ================= GRADIENT CONTAINER ================= */}
-        <div className="relative rounded-[48px] bg-gradient-to-r from-purple-800 via-purple-700 to-indigo-600 px-12 pt-20 pb-60 overflow-hidden">
+        <div className="relative rounded-[48px] bg-gradient-to-r from-[#1F3C88] via-[#2b4aa5] to-[#14213D] px-12 pt-20 pb-60 overflow-hidden">
 
           <div className="max-w-3xl text-white">
             <p className="text-sm text-orange-400 mb-4 flex items-center gap-2">

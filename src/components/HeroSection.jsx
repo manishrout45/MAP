@@ -16,7 +16,7 @@ export default function HeroSection() {
         />
 
         {/* GRADIENT OVERLAY */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1e2b8f]/90 via-[#2b4aa5]/85 to-[#8a2c4f]/90" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#14213D]/90 via-[#2b4aa5]/85 to-[#1F3C88]/90" />
 
         {/* ================= HERO CONTENT ================= */}
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-28 sm:pt-32 lg:pt-40">
@@ -25,10 +25,15 @@ export default function HeroSection() {
             ROI-Driven Digital Marketing Agency
           </p>
 
-          <h1 className="text-white font-extrabold leading-tight mt-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-            Scale Your Brand With <br />
-            High-Impact Digital Growth
+          <h1 className="text-white font-extrabold leading-tight mt-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl animate-fadeUp">
+            <span className="block">
+              Scale Your Brand With
+            </span>
+            <span className="block delay-200">
+              High-Impact Digital Growth
+            </span>
           </h1>
+
 
           <p className="text-white/80 max-w-xl mx-auto mt-5 text-sm sm:text-base">
             MarcAdsPro helps businesses grow faster with data-driven ads,

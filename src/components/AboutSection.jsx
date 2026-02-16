@@ -63,7 +63,7 @@ export default function About() {
               className="
                 text-6xl font-extrabold
                 relative inline-block
-                bg-gradient-to-r from-pink-400 to-blue-400
+                bg-gradient-to-r from-[#1F3C88] to-[#14213D]
                 bg-clip-text text-transparent
                 [-webkit-text-stroke:4.8px_transparent]
                 before:content-[attr(data-text)]

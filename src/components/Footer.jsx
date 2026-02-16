@@ -1,10 +1,10 @@
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Mail, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="relative w-full mt-32">
       {/* GRADIENT CONTAINER */}
-      <div className="relative overflow-hidden rounded-[48px] bg-gradient-to-r from-[#6b1c6f] via-[#5b2ea6] to-[#3b46d1] text-white">
+      <div className="relative overflow-hidden rounded-[48px] bg-gradient-to-r from-[#1F3C88] via-[#2b4aa5] to-[#14213D] text-white">
 
         {/* BIG WATERMARK LOGO */}
         <div className="pointer-events-none absolute left-[-120px] bottom-[-120px] opacity-[0.08]">
@@ -73,20 +73,50 @@ export default function Footer() {
 
           {/* LOGO & SOCIAL */}
           <div className="lg:col-span-2">
-            {/* 🔥 MarcAdsPro LOGO */}
             <div className="mb-6">
               <img
-                src="/assets/images/logo/logo.png"
+                src="/assets/images/logo/finalww.png"
                 alt="MarcAdsPro Logo"
-                className="h-12 md:h-14 w-auto object-contain"
+                className="h-12 md:h-20 w-auto object-contain"
               />
             </div>
 
-            <div className="flex gap-6 text-sm text-white/80">
-              <span>Facebook</span>
-              <span>Instagram</span>
-              <span>LinkedIn</span>
-              <span>Twitter</span>
+            <div className="flex gap-6 text-white/80">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#ff5a3c] transition"
+              >
+                <Facebook size={24} />
+              </a>
+
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#ff5a3c] transition"
+              >
+                <Instagram size={24} />
+              </a>
+
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#ff5a3c] transition"
+              >
+                <Linkedin size={24} />
+              </a>
+
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#ff5a3c] transition"
+              >
+                <Twitter size={24} />
+              </a>
             </div>
           </div>
 

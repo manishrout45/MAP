@@ -192,9 +192,10 @@ a:hover ~ .cursor-circle {
 
 
 
-
 /* ================= MARQUEE ANIMATION ================= */
-@keyframes marquee {
+
+/* LEFT FLOW (default) */
+@keyframes marquee-left {
   0% {
     transform: translateX(0);
   }
@@ -203,14 +204,64 @@ a:hover ~ .cursor-circle {
   }
 }
 
+/* RIGHT FLOW (reverse direction) */
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .marquee {
   display: flex;
   width: max-content;
-  animation: marquee 18s linear infinite;
+  animation: marquee-left 18s linear infinite;
 }
 
 .marquee-slow {
   display: flex;
   width: max-content;
-  animation: marquee 26s linear infinite;
+  animation: marquee-right 26s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-18px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+
+
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.delay-200 {
+  animation-delay: 0.3s;
 }

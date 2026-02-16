@@ -6,8 +6,10 @@ import {
   Linkedin,
   Instagram,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
-export default function OurTeam() {
+
+export default function MeetOurTeam() {
   const team = [
     {
       id: 1,
@@ -72,10 +74,13 @@ export default function OurTeam() {
             </h2>
           </div>
 
-          <button className="flex items-center gap-2 px-6 py-3 rounded-lg bg-[#ff5a3c] text-white text-sm font-semibold hover:bg-black transition">
-            MEET THE TEAM
-            <ArrowRight size={16} />
-          </button>
+          <Link to="/ourteam">
+  <button className="flex items-center gap-2 px-6 py-3 rounded-lg bg-[#ff5a3c] text-white text-sm font-semibold hover:bg-black transition">
+    MEET THE TEAM
+    <ArrowRight size={16} />
+  </button>
+</Link>
+
         </div>
 
         {/* GRID */}

@@ -1,4 +1,6 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
 
 export default function NewsSection() {
   const posts = [
@@ -51,10 +53,12 @@ export default function NewsSection() {
             </h2>
           </div>
 
+          <Link to="/blog">
           <button className="self-start lg:self-center flex items-center gap-2 px-6 py-3 rounded-lg bg-[#ff5a3c] text-white text-sm font-semibold hover:bg-black transition">
             VIEW ALL POSTS
             <ArrowRight size={16} />
           </button>
+          </Link>
         </div>
 
         {/* CARDS */}

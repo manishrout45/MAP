@@ -3,7 +3,7 @@ import ServiceSection from "../components/ServiceSection";
 import HeroSection from "../components/HeroSection";
 import useScrollFade from "../hooks/useScrollFade";
 import NewsSection from "../components/NewsSection";
-import OurTeam from "../components/OurTeam";
+import MeetOurTeam from "../components/MeetOurTeam";
 import Transformation from "../components/Transformation";
 import IndustriesSection from "../components/IndustriesSection";
 import WhyChooseUs from "../components/WhyChooseUs";
@@ -19,7 +19,7 @@ const Home = () => {
       <FeaturedProjects className="fade-up" />
       <WhyChooseUs className="fade-left" />
       <IndustriesSection className="fade-right" />
-      <OurTeam className="fade-up" />
+      <MeetOurTeam className="fade-up" />
       <Transformation className="fade-left" />
       <NewsSection className="fade-right" />
 

@@ -95,7 +95,7 @@ export default function ServiceSection() {
                 "
                 style={{
                   background:
-                    "linear-gradient(135deg, #ff5a3c 0%, #8a4bdc 50%, #3b4bff 100%)",
+                    "linear-gradient(135deg, #ff5a3c 0%, #14213D 50%, #1F3C88 100%)",
                 }}
               />
 

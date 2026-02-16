@@ -37,7 +37,7 @@ export default function Transformation() {
 
   return (
     <section className="w-full py-24">
-      <div className="relative max-w-7xl mx-auto rounded-[32px] bg-gradient-to-r from-purple-700 via-purple-800 to-indigo-900 overflow-hidden">
+      <div className="relative max-w-7xl mx-auto rounded-[32px] bg-gradient-to-r from-[#1F3C88] via-[#2b4aa5] to-[#14213D] overflow-hidden">
 
         {/* Floating Logo */}
         <div className="absolute top-6 right-8">

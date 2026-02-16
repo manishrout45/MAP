@@ -50,7 +50,7 @@ export default function FeaturedProjects() {
   ];
 
   return (
-    <section className="w-full rounded-[48px] bg-gradient-to-br from-[#5b1bbd] via-[#5a189a] to-[#4a148c] py-28">
+    <section className="w-full rounded-[48px] bg-gradient-to-br from-[#1F3C88] via-[#2b4aa5] to-[#14213D] py-28">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* HEADER */}

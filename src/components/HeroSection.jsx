@@ -1,166 +1,110 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
     <section className="relative w-full bg-white overflow-hidden">
-      {/* ================= HERO BACKGROUND ================= */}
-      <div className="relative min-h-[85vh] sm:min-h-[90vh] overflow-hidden rounded-b-[32px] sm:rounded-b-[48px]">
+      
+      {/* ================= HERO WRAPPER ================= */}
+      <div className="relative min-h-[100vh] flex items-center overflow-hidden rounded-b-[60px]">
 
-        {/* BACKGROUND IMAGE */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('https://img.freepik.com/free-vector/gradient-wave-purple-background-modern-design-abstract_343694-2321.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_hybrid&w=740&q=80')",
-          }}
-        />
+        {/* ================= BACKGROUND VIDEO ================= */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover "
+        >
+          <source src="/assets/herobg-2.mp4" type="video/mp4" />
+        </video>
 
-        {/* GRADIENT OVERLAY */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#14213D]/90 via-[#2b4aa5]/85 to-[#1F3C88]/90" />
+        {/* ================= COLOR GRADIENT OVERLAY ================= */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a]/100 via-[#1e3a8a]/90 to-[#1e40af]/90" />
 
-        {/* ================= HERO CONTENT ================= */}
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center pt-24 sm:pt-32 lg:pt-64">
-          <p className="text-xs sm:text-sm text-white/80 flex items-center justify-center gap-2">
-            <span className="text-orange-400">★</span>
-            ROI-Driven Digital Marketing Agency
-          </p>
+        {/* Soft Glow Effects */}
+        <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[140px]" />
+        <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-[140px]" />
 
-          <h1 className="text-white font-extrabold leading-tight mt-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-            <span className="block">Scale Your Brand With</span>
-            <span className="block">High-Impact Digital Growth</span>
-          </h1>
+        {/* ================= CONTENT ================= */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full py-28 lg:py-36">
+          
+          <div className="grid lg:grid-cols-2 gap-20 xl:gap-28 items-center">
 
-          <p className="text-white/80 max-w-xl mx-auto mt-5 text-sm sm:text-base px-2 sm:px-0">
-            MarcAdsPro helps businesses grow faster with data-driven ads,
-            SEO, social media marketing, and conversion-focused strategies.
-          </p>
+            {/* ================= LEFT SIDE ================= */}
+            <div className="text-center lg:text-left max-w-xl mx-auto lg:mx-0">
 
-          <button className="mt-8 sm:mt-12 inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 transition text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-medium shadow-lg">
-            Get Free Strategy Call
-            <span className="bg-white text-orange-500 rounded-full w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center">
-              →
-            </span>
-          </button>
-        </div>
-
-        {/* Decorative Shapes */}
-        <img
-          src="/assets/3d-shape-left.png"
-          alt=""
-          className="absolute left-6 bottom-32 w-16 sm:w-20 md:w-24 hidden sm:block z-10"
-        />
-        <img
-          src="/assets/3d-shape-right.png"
-          alt=""
-          className="absolute right-6 bottom-36 w-16 sm:w-20 md:w-24 hidden sm:block z-10"
-        />
-      </div>
-
-      {/* ================= FLOATING CARDS ================= */}
-      <div
-        className="
-          relative
-          md:absolute md:left-1/2
-          md:top-[calc(85vh-40px)]
-          md:sm:top-[calc(90vh-60px)]
-          md:-translate-x-1/2
-          w-full max-w-6xl px-4 sm:px-6
-          z-30 mt-10 md:mt-0
-        "
-      >
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 items-stretch">
-
-          {/* CARD 1 */}
-          <div className="h-full bg-gradient-to-br from-purple-600 to-violet-700 
-                          rounded-xl sm:rounded-2xl 
-                          p-4 sm:p-5 lg:p-6 
-                          text-white shadow-2xl relative overflow-hidden">
-
-            <p className="text-[10px] sm:text-xs uppercase tracking-wide text-white/70">
-              Campaign Performance
-            </p>
-
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-2">
-              +320%
-            </h2>
-
-            <p className="text-xs sm:text-sm text-white/80 mt-1">
-              Average Return on Ad Spend
-            </p>
-
-            <div className="mt-4 sm:mt-6 h-14 sm:h-16 lg:h-20">
-              <svg viewBox="0 0 120 50" className="w-full h-full">
-                <polygon
-                  points="0,38 20,34 40,36 60,28 80,20 100,12 120,8 120,50 0,50"
-                  fill="white"
-                  opacity="0.08"
-                />
-                <polyline
-                  points="0,38 20,34 40,36 60,28 80,20 100,12 120,8"
-                  fill="none"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </div>
-
-            <div className="mt-3 text-[10px] sm:text-xs text-green-300 font-medium">
-              ↑ 42% growth last 90 days
-            </div>
-          </div>
-
-          {/* CARD 2 */}
-          <div className="h-full bg-gradient-to-br from-blue-500 to-indigo-600 
-                          rounded-xl sm:rounded-2xl 
-                          p-4 sm:p-5 lg:p-6 
-                          text-white shadow-2xl relative overflow-hidden">
-
-            <p className="text-[10px] sm:text-xs uppercase tracking-wide text-white/70">
-              Lead Generation
-            </p>
-
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-2">
-              10K+
-            </h2>
-
-            <p className="text-xs sm:text-sm text-white/80">
-              Qualified Leads / Month
-            </p>
-
-            <div className="mt-4">
-              <div className="w-full h-1.5 sm:h-2 bg-white/20 rounded-full">
-                <div className="w-[75%] h-1.5 sm:h-2 bg-white rounded-full"></div>
-              </div>
-              <p className="text-[10px] sm:text-xs mt-2 text-white/70">
-                Conversion optimization performance
+              <p className="text-sm text-orange-400 font-medium tracking-wide uppercase mb-6">
+                ROI-Driven Digital Marketing Agency
               </p>
-            </div>
-          </div>
 
-          {/* CARD 3 */}
-          <div className="h-full relative rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl">
-            <img
-              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
-              alt=""
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black/45 p-4 sm:p-5 lg:p-6 flex flex-col justify-end">
-              <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">
-                Certified Marketing Experts
-              </h3>
-              <span className="text-orange-400 text-xs sm:text-sm mt-2">
-                VIEW CASE STUDIES →
-              </span>
-            </div>
-          </div>
+              <h1 className="text-white font-extrabold leading-[1.15] text-4xl sm:text-5xl md:text-6xl">
+                Digital Marketing That Drives
+                <span className="block text-orange-400 mt-2">
+                  Traffic, Leads & Sales
+                </span>
+              </h1>
 
+              <p className="text-white/75 mt-8 text-base md:text-lg leading-relaxed">
+                Performance-driven strategies for SEO, paid ads, social media 
+                marketing, and high-converting funnels designed to scale your 
+                business sustainably.
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="mt-10 flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
+
+                <Link
+                  to="/contact"
+                  className="bg-orange-500 hover:bg-orange-600 transition-all duration-300 text-white px-8 py-4 rounded-xl font-semibold shadow-xl hover:scale-105 inline-block"
+                >
+                  Get Free Strategy Call
+                </Link>
+
+                <Link
+                  to="/casestudies"
+                  className="border border-white/40 hover:bg-white hover:text-blue-900 transition-all duration-300 text-white px-8 py-4 rounded-xl font-semibold inline-block"
+                >
+                  View Case Studies
+                </Link>
+
+              </div>
+
+            </div>
+
+            {/* ================= RIGHT SIDE ================= */}
+            <div className="relative flex justify-center lg:justify-end">
+
+              <div className="relative w-full max-w-xl">
+
+                <img
+                  src="https://img.freepik.com/premium-photo/complex-business-application-website-with-statistic-infographic-design-aig53_31965-597884.jpg?uid=R162123361&ga=GA1.1.1312737827.1743758138&semt=ais_user_personalization&w=740&q=80"
+                  alt="Marketing Analytics Dashboard"
+                  className="rounded-3xl shadow-2xl border border-white/10"
+                />
+
+                <div className="absolute -top-8 -left-8 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl px-6 py-5 hidden md:block">
+                  <p className="text-xs text-gray-500 mb-1">Ad Performance</p>
+                  <p className="text-2xl font-bold text-blue-600">+245%</p>
+                  <p className="text-xs text-green-500 mt-1">
+                    ↑ 38% this quarter
+                  </p>
+                </div>
+
+                <div className="absolute -bottom-8 -right-8 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl px-6 py-5 hidden md:block">
+                  <p className="text-xs text-gray-500 mb-1">Conversion Rate</p>
+                  <p className="text-2xl font-bold text-green-600">4.8%</p>
+                  <p className="text-xs text-gray-500 mt-1">
+                    Optimized funnel
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
-
-      {/* Spacer */}
-      <div className="h-[300px] sm:h-[250px] lg:h-[220px]" />
     </section>
   );
 }

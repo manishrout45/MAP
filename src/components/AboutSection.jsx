@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function About() {
   return (
@@ -23,11 +24,11 @@ export default function About() {
           </p>
         </div>
 
-        <div className="flex justify-center lg:justify-end">
+        <div className="w-full h-full">
           <img
-            src="https://img.freepik.com/premium-photo/group-people-looking-digital-tablet-with-social-media-icons-workplace_926199-2209176.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_hybrid&w=740&q=80"
+            src="https://img.freepik.com/premium-photo/group-people-looking-digital-tablet-with-social-media-icons-workplace_926199-2209176.jpg"
             alt="MarcAdsPro Team"
-            className="w-64 md:w-80"
+            className="w-full h-full object-cover rounded-xl shadow-xl"
           />
         </div>
       </div>
@@ -41,6 +42,7 @@ export default function About() {
             desc:
               "Every strategy we build is focused on measurable growth, higher conversions, and long-term ROI.",
             link: "ABOUT US",
+             linkTo: "/about",
           },
           {
             no: "02",
@@ -48,6 +50,7 @@ export default function About() {
             desc:
               "We don’t believe in one-size-fits-all. Our campaigns are tailored to your industry, goals, and audience.",
             link: "OUR SERVICES",
+            linkTo: "/#services",
           },
           {
             no: "03",
@@ -55,6 +58,7 @@ export default function About() {
             desc:
               "Our team consists of experienced professionals in paid ads, SEO, content, and analytics.",
             link: "WORK WITH US",
+            linkTo: "/#final-cta",
           },
         ].map((item) => (
           <div key={item.no} className="group">
@@ -83,12 +87,15 @@ export default function About() {
             <h4 className="mt-6 font-bold text-lg">{item.title}</h4>
             <p className="text-sm text-gray-500 mt-4">{item.desc}</p>
 
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 mt-5 text-sm font-semibold text-black"
-            >
-              {item.link} <span className="text-orange-500">→</span>
-            </a>
+            <Link
+  to={item.linkTo}
+  className="inline-flex items-center gap-2 mt-5 text-sm font-semibold text-black hover:text-blue-600 transition-all duration-300 group"
+>
+  {item.link}
+  <span className="text-orange-500 group-hover:translate-x-1 transition-transform">
+    →
+  </span>
+</Link>
           </div>
         ))}
       </div>

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import {
+  Lightbulb,
   BarChart3,
-  Target,
-  TrendingUp,
+  Users,
+  FileBarChart,
   Rocket,
   PieChart,
   PenTool,
@@ -25,14 +26,14 @@ export default function WhyChooseUs() {
         {/* ================= WHY CHOOSE US ================= */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-          {/* LEFT */}
+          {/* LEFT CONTENT */}
           <div>
             <span className="text-sm font-medium text-[#ff5a3c]">
               • Why MarcAdsPro
             </span>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-4">
-              Helping brands grow faster <br /> with performance marketing
+              Helping brands grow faster with performance marketing
             </h2>
 
             <p className="text-black/60 mt-6 max-w-lg text-sm md:text-base">
@@ -41,61 +42,79 @@ export default function WhyChooseUs() {
               business results.
             </p>
 
-            <div className="mt-8 md:mt-10 space-y-8">
-              <Feature
-                icon={<BarChart3 size={18} />}
-                title="Increase Online Visibility"
-                desc="Boost reach through SEO, paid ads, and social media marketing."
-              />
-              <Feature
-                icon={<Target size={18} />}
-                title="Reach the Right Audience"
-                desc="Target users who are most likely to convert into customers."
-              />
-              <Feature
-                icon={<TrendingUp size={18} />}
-                title="Maximize ROI & Sales"
-                desc="Optimized funnels and ad strategies focused on conversions."
-              />
+            {/* FEATURE GRID */}
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8">
+
+              {[
+                {
+                  icon: <Lightbulb size={22} />,
+                  title: "Customized Strategies",
+                  desc: "Tailored marketing strategies designed specifically for your business goals.",
+                  color: "from-orange-100 to-orange-200 text-orange-600"
+                },
+                {
+                  icon: <BarChart3 size={22} />,
+                  title: "Data-Driven Campaigns",
+                  desc: "Performance-focused campaigns backed by analytics and measurable results.",
+                  color: "from-blue-100 to-indigo-200 text-blue-600"
+                },
+                {
+                  icon: <Users size={22} />,
+                  title: "Dedicated Attention",
+                  desc: "End-to-end support with a team fully committed to your success.",
+                  color: "from-purple-100 to-pink-200 text-purple-600"
+                },
+                {
+                  icon: <FileBarChart size={22} />,
+                  title: "Transparent Reporting",
+                  desc: "Clear performance tracking and reporting so you always know your ROI.",
+                  color: "from-green-100 to-emerald-200 text-green-600"
+                }
+              ].map((item, i) => (
+                <div key={i} className="group bg-white rounded-2xl p-7 shadow-md border border-gray-200 transition-all duration-300 hover:border-orange-500 hover:shadow-[0_10px_30px_rgba(249,115,22,0.15)] hover:-translate-y-2">
+                  <div className="flex items-start gap-4">
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shrink-0 group-hover:scale-110 transition`}>
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-black/60 leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+
             </div>
           </div>
 
-          {/* RIGHT IMAGE */}
+          {/* RIGHT IMAGE - BLOB SHAPE */}
           <div className="relative flex justify-center">
-            <div
-              className="
-              relative
-              w-[280px] h-[280px]
-              sm:w-[320px] sm:h-[320px]
-              md:w-[380px] md:h-[380px]
-              lg:w-[420px] lg:h-[420px]
-              rounded-full bg-gradient-to-br from-[#14213D] via-[#2b4aa5] to-[#1F3C88]
-              flex items-center justify-center
-            "
-            >
+            <div className="relative">
+
+              {/* Blob Image */}
               <img
                 src="https://img.freepik.com/free-photo/handsome-smiling-young-man-pointing-finger_171337-17141.jpg"
                 alt=""
                 className="
-                w-[240px] h-[240px]
-                sm:w-[280px] sm:h-[280px]
-                md:w-[330px] md:h-[330px]
-                lg:w-[360px] lg:h-[360px]
-                object-cover rounded-full
-              "
+                  w-[280px] h-[280px]
+                  sm:w-[320px] sm:h-[320px]
+                  md:w-[380px] md:h-[380px]
+                  lg:w-[420px] lg:h-[420px]
+                  object-cover
+                  rounded-[60%_40%_30%_70%/60%_30%_70%_40%]
+                  shadow-2xl
+                "
               />
 
-              {/* FLOATING CARDS */}
               <FloatingCard
                 title="98%"
                 subtitle="Client Satisfaction"
                 style={{ transform: `translateY(${scrollY * 0.08}px)` }}
-                className="
-                  absolute
-                  top-2 right-2
-                  sm:top-2 sm:-right-6
-                  lg:top-2 lg:-right-10
-                "
+                className="absolute top-0 -right-10"
               />
 
               <FloatingCard
@@ -103,12 +122,7 @@ export default function WhyChooseUs() {
                 subtitle="Revenue Generated"
                 extra="+32% Growth"
                 style={{ transform: `translateY(${scrollY * -0.06}px)` }}
-                className="
-                  absolute
-                  bottom-4 left-2
-                  sm:bottom-10 sm:-left-6
-                  lg:bottom-14 lg:-left-12
-                "
+                className="absolute -bottom-6 -left-10"
               />
             </div>
           </div>
@@ -117,56 +131,40 @@ export default function WhyChooseUs() {
         {/* ================= HOW WE WORK ================= */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-          {/* IMAGE */}
+          {/* IMAGE - DIAMOND SHAPE */}
           <div className="relative flex justify-center order-2 lg:order-1">
-            <div
-              className="
-              relative
-              w-[280px] h-[280px]
-              sm:w-[320px] sm:h-[320px]
-              md:w-[380px] md:h-[380px]
-              lg:w-[420px] lg:h-[420px]
-              rounded-full bg-gradient-to-br from-[#1F3C88] via-[#2b4aa5] to-[#14213D]
-              flex items-center justify-center
-            "
-            >
-              <img
-                src="https://img.freepik.com/free-photo/portrait-happy-young-woman-showing-ok-sign_171337-13035.jpg"
-                alt=""
-                className="
-                w-[240px] h-[240px]
-                sm:w-[280px] sm:h-[280px]
-                md:w-[330px] md:h-[330px]
-                lg:w-[360px] lg:h-[360px]
-                object-cover rounded-full
-              "
-              />
+  <div className="relative w-[380px] lg:w-[460px] h-[420px] lg:h-[520px] group">
 
-              <FloatingCard
-                title="85%"
-                subtitle="Avg. Engagement"
-                style={{ transform: `translateY(${scrollY * 0.07}px)` }}
-                className="
-                  absolute
-                  top-2 left-2
-                  sm:top-2 sm:-left-6
-                  lg:top-2 lg:-left-12
-                "
-              />
+    {/* Background Gradient Blur */}
+    <div className="absolute inset-0 bg-gradient-to-tr from-orange-200 via-pink-200 to-purple-200 rounded-[50px] blur-3xl opacity-40 group-hover:opacity-60 transition duration-500"></div>
 
-              <FloatingBadge
-                text="Fast Execution"
-                style={{ transform: `translateY(${scrollY * -0.09}px)` }}
-                className="
-                  absolute
-                  bottom-2 right-2
-                  sm:-bottom-8 sm:right-4
-                  lg:-bottom-16 lg:right-0
-                "
-              />
-            </div>
+    {/* Main Image Card */}
+    <div className="relative overflow-hidden mt-16 rounded-[50px] shadow-2xl border border-white/30 transition duration-500 group-hover:scale-105">
+
+      <img
+        src="/assets/images/HowweWork.png"
+        alt="Marketing Strategy"
+        className="w-full h-[320px] lg:h-[420px] object-cover "
+      />
+
           </div>
 
+    {/* Floating Card */}
+    <FloatingCard
+      title="85%"
+      subtitle="Avg. Engagement"
+      style={{ transform: `translateY(${scrollY * 0.07}px)` }}
+      className="absolute -top-0 -left-10 bg-white shadow-xl"
+    />
+
+    {/* Floating Badge */}
+    <FloatingBadge
+      text="Fast Execution"
+      style={{ transform: `translateY(${scrollY * -0.09}px)` }}
+      className="absolute -bottom-28 -right-8"
+    />
+  </div>
+</div>
           {/* CONTENT */}
           <div className="order-1 lg:order-2">
             <span className="text-sm font-medium text-[#ff5a3c]">
@@ -196,20 +194,6 @@ export default function WhyChooseUs() {
 }
 
 /* ================= COMPONENTS ================= */
-
-function Feature({ icon, title, desc }) {
-  return (
-    <div className="flex gap-5">
-      <div className="w-10 h-10 rounded-full bg-[#fff2ef] text-[#ff5a3c] flex items-center justify-center shrink-0">
-        {icon}
-      </div>
-      <div>
-        <h4 className="font-semibold">{title}</h4>
-        <p className="text-sm text-black/60 mt-1">{desc}</p>
-      </div>
-    </div>
-  );
-}
 
 function FloatingCard({ title, subtitle, extra, className, style }) {
   return (

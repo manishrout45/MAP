@@ -1,50 +1,47 @@
 import { ArrowRight } from "lucide-react";
-
+import { Link } from "react-router-dom";
 export default function FeaturedProjects() {
   const projects = [
     {
       id: 1,
       type: "video",
-      src: "/assets/6035575_People_Person_1920x1080.mp4",
-      title: "Performance Marketing That Drives Real Growth",
+      src: "/assets/case-study-clinic.mp4", // Replace with real snapshot video if available
+      title: "Local Multi-Specialty Clinic – 200% Lead Growth",
       desc:
-        "At Marc Ads Pro, we craft data-driven marketing campaigns designed to attract, engage, and convert high-intent audiences across digital platforms.",
+        "Problem: The clinic was struggling with low appointment bookings and high cost per lead.\n\nSolution: We restructured Google & Meta Ads campaigns, optimized landing pages, and implemented precise conversion tracking.\n\nResults: +200% leads in 90 days | 4X ROAS | -35% Cost Per Lead.",
       tags: [
-        "Performance Marketing",
-        "Paid Ads",
-        "Conversion Optimization",
-        "Analytics",
+        "+200% Leads",
+        "4X ROAS",
+        "Healthcare Marketing",
+        "Google & Meta Ads",
       ],
     },
     {
       id: 2,
       type: "image",
-      src:
-        "https://img.freepik.com/premium-photo/blue-dart-hitting-dartboard_175634-2540.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_user_personalization&w=740&q=80",
-      title: "Target the Right Audience. Maximize ROI.",
+      src: "https://img.freepik.com/free-photo/decorated-wedding-hall-with-candles-round-tables-centerpieces_8353-10057.jpg?uid=R162123361&ga=GA1.1.1312737827.1743758138&semt=ais_user_personalization&w=740&q=80", // Use real performance chart image
+      title: "Event Management Brand – 3.5X ROI in 4 Months",
       desc:
-        "Our precision-targeted ad strategies ensure your brand reaches the right people at the right time, maximizing return on investment across all channels.",
+        "Problem: The business faced inconsistent inquiries and low brand visibility.\n\nSolution: We launched precision-targeted ad funnels, remarketing campaigns, and SEO optimization for high-intent keywords.\n\nResults: +180% inquiries | Top 10 ranking for key wedding term | 3.5X ROI.",
       tags: [
-        "Audience Targeting",
-        "Google Ads",
-        "Meta Ads",
-        "ROI Strategy",
-        "Brand Growth",
+        "+180% Inquiries",
+        "Top 10 SEO Ranking",
+        "3.5X ROI",
+        "Performance Marketing",
       ],
     },
     {
       id: 3,
       type: "video",
-      src: "/assets/6035575_People_Person_1920x1080.mp4",
-      title: "Creative Strategies That Elevate Your Brand",
+      src: "/assets/Ecom.mp4",
+      title: "Ecommerce Fashion Brand – 250% Revenue Growth",
       desc:
-        "From compelling creatives to powerful brand messaging, Marc Ads Pro helps businesses stand out, build trust, and scale faster in competitive markets.",
+        "Problem: High cart abandonment and poor return on paid ad spend.\n\nSolution: Optimized ad creatives, improved product pages, and implemented advanced retargeting strategies.\n\nResults: +250% revenue growth | 5X ROAS | -28% cart abandonment.",
       tags: [
-        "Brand Strategy",
-        "Creative Design",
-        "Digital Marketing",
-        "SEO & Analytics",
-        "Web Experience",
+        "+250% Revenue",
+        "5X ROAS",
+        "Ecommerce Scaling",
+        "Conversion Optimization",
       ],
     },
   ];
@@ -57,20 +54,23 @@ export default function FeaturedProjects() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 mb-24">
           <div>
             <span className="text-sm text-[#ff5a3c] font-medium">
-              • Our Featured Work
+              • Case Studies
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 max-w-2xl">
-              Marketing solutions built <br /> for scalable business growth
+              Case Studies: Real Results, Real Growth
             </h2>
           </div>
 
-          <button className="flex items-center gap-2 px-6 py-3 rounded-lg bg-[#ff5a3c] text-white text-sm font-semibold hover:bg-black transition">
+          <Link
+            to="/casestudies"
+            className="flex items-center gap-2 px-6 py-3 rounded-lg bg-[#ff5a3c] text-white text-sm font-semibold hover:bg-black transition"
+          >
             VIEW ALL CASE STUDIES
             <ArrowRight size={16} />
-          </button>
+          </Link>
         </div>
 
-        {/* STACKING CARDS */}
+        {/* STACKING CARDS (Design unchanged) */}
         <div className="relative space-y-32">
           {projects.map((project, index) => (
             <div
@@ -107,17 +107,17 @@ export default function FeaturedProjects() {
                       {project.title}
                     </h3>
 
-                    <p className="text-black/60 mt-4 max-w-lg">
+                    <p className="text-black/60 mt-4 max-w-lg whitespace-pre-line">
                       {project.desc}
                     </p>
 
                     <button className="flex items-center gap-2 text-sm font-semibold mt-6 hover:text-[#ff5a3c] transition">
-                      EXPLORE CASE STUDY
+                      VIEW FULL CASE STUDY
                       <ArrowRight size={14} />
                     </button>
                   </div>
 
-                  {/* TAGS */}
+                  {/* TAGS (Now showing results highlights) */}
                   <div className="flex flex-wrap gap-2 mt-6">
                     {project.tags.map((tag, index) => (
                       <span

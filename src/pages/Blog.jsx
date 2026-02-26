@@ -3,7 +3,7 @@ import NewsSection from "../components/NewsSection";
 export default function Blog() {
   return (
     <>
-            {/* ===== About Header Section ===== */}
+            {/* ===== Blog Header Section ===== */}
       <section className="relative w-full pt-28 pb-24 bg-gradient-to-r from-[#1F3C88] via-[#2b4aa5] to-[#14213D] rounded-b-[60px]">
         <div className="max-w-7xl mx-auto px-4 text-center text-white">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">

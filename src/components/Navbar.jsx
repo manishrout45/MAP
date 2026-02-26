@@ -1,10 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import {
-  FiMenu,
-  FiX,
-  FiChevronDown,
-} from "react-icons/fi";
+import { FiMenu, FiX, FiChevronDown } from "react-icons/fi";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -14,7 +10,15 @@ export default function Navbar() {
 
   const location = useLocation();
 
-  const menu = ["Home", "Services", "Pages", "Blog", "Contact"];
+  const menu = [
+    "Home",
+    "Services",
+    "Pages",
+    "Portfolio",
+    "Case Studies",
+    "Blog",
+    "Contact",
+  ];
 
   const servicesMenu = [
     { name: "Ad Shoot/Corporate Shoot", path: "/adshoot" },
@@ -48,7 +52,13 @@ export default function Navbar() {
   return (
     <>
       {/* NAVBAR */}
-      <header className="fixed top-0 left-0 w-full z-50">
+      <header className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 
+        ${ 
+          scrolled
+          ? "bg-blue-800 shadow-md rounded-b-3xl"
+          : "bg-transparent"
+        }
+        `}>
         <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
 
           {/* LOGO */}
@@ -134,6 +144,10 @@ export default function Navbar() {
                   to={
                     item === "Home"
                       ? "/"
+                      : item === "Portfolio"
+                      ? "/portfolio"
+                      : item === "Case Studies"
+                      ? "/casestudies"
                       : item === "Blog"
                       ? "/blog"
                       : item === "Contact"
@@ -142,6 +156,9 @@ export default function Navbar() {
                   }
                   className={`hover:text-orange-500 ${
                     (item === "Home" && isActive("/")) ||
+                    (item === "Portfolio" && isActive("/portfolio")) ||
+                    (item === "Case Studies" &&
+                      isActive("/casestudies")) ||
                     (item === "Blog" && isActive("/blog")) ||
                     (item === "Contact" && isActive("/contact"))
                       ? "text-orange-500 font-semibold"
@@ -156,16 +173,17 @@ export default function Navbar() {
 
           {/* RIGHT SIDE */}
           <div className="flex items-center gap-4">
-            <button
-              className={`hidden lg:block px-5 py-2 rounded-full border text-sm
-              ${
-                scrolled
-                  ? "border-black/30 text-black hover:bg-black hover:text-white"
-                  : "border-white/30 text-white hover:bg-white hover:text-black"
-              }`}
-            >
-              GET STARTED
-            </button>
+           <Link
+  to="/contact"
+  className={`hidden lg:inline-block px-5 py-2 rounded-full border text-sm transition
+  ${
+    scrolled
+      ? "border-black/30 text-black hover:bg-black hover:text-white"
+      : "border-white/30 text-white hover:bg-white hover:text-black"
+  }`}
+>
+  Get Free Consultation
+</Link>
 
             <button onClick={() => setOpen(true)} className="lg:hidden text-white">
               <FiMenu size={24} />
@@ -208,24 +226,16 @@ export default function Navbar() {
               Home
             </Link>
 
-            {/* SERVICES ACCORDION */}
+            {/* SERVICES */}
             <div className="border-b pb-3">
               <button
                 onClick={() => {
                   setMobileServicesOpen(!mobileServicesOpen);
-                  setMobilePagesOpen(false); // auto close pages
+                  setMobilePagesOpen(false);
                 }}
                 className="flex justify-between items-center w-full"
               >
-                <span
-                  className={
-                    servicesMenu.some((s) => isActive(s.path))
-                      ? "text-orange-500 font-semibold"
-                      : ""
-                  }
-                >
-                  Services
-                </span>
+                <span>Services</span>
                 <FiChevronDown
                   className={`transition-transform ${
                     mobileServicesOpen ? "rotate-180" : ""
@@ -239,10 +249,7 @@ export default function Navbar() {
                     <Link
                       key={idx}
                       to={s.path}
-                      onClick={() => {
-                        setOpen(false);
-                        setMobileServicesOpen(false);
-                      }}
+                      onClick={() => setOpen(false)}
                       className={`block text-sm ${
                         isActive(s.path)
                           ? "text-orange-500 font-semibold"
@@ -256,24 +263,16 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* PAGES ACCORDION */}
+            {/* PAGES */}
             <div className="border-b pb-3">
               <button
                 onClick={() => {
                   setMobilePagesOpen(!mobilePagesOpen);
-                  setMobileServicesOpen(false); // auto close services
+                  setMobileServicesOpen(false);
                 }}
                 className="flex justify-between items-center w-full"
               >
-                <span
-                  className={
-                    pagesMenu.some((p) => isActive(p.path))
-                      ? "text-orange-500 font-semibold"
-                      : ""
-                  }
-                >
-                  Pages
-                </span>
+                <span>Pages</span>
                 <FiChevronDown
                   className={`transition-transform ${
                     mobilePagesOpen ? "rotate-180" : ""
@@ -287,10 +286,7 @@ export default function Navbar() {
                     <Link
                       key={idx}
                       to={p.path}
-                      onClick={() => {
-                        setOpen(false);
-                        setMobilePagesOpen(false);
-                      }}
+                      onClick={() => setOpen(false)}
                       className={`block text-sm ${
                         isActive(p.path)
                           ? "text-orange-500 font-semibold"
@@ -303,6 +299,30 @@ export default function Navbar() {
                 </div>
               )}
             </div>
+
+            <Link
+              to="/portfolio"
+              onClick={() => setOpen(false)}
+              className={`block border-b pb-3 ${
+                isActive("/portfolio")
+                  ? "text-orange-500 font-semibold"
+                  : ""
+              }`}
+            >
+              Portfolio
+            </Link>
+
+            <Link
+              to="/casestudies"
+              onClick={() => setOpen(false)}
+              className={`block border-b pb-3 ${
+                isActive("/casestudies")
+                  ? "text-orange-500 font-semibold"
+                  : ""
+              }`}
+            >
+              Case Studies
+            </Link>
 
             <Link
               to="/blog"

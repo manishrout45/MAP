@@ -265,3 +265,9 @@ a:hover ~ .cursor-circle {
 .delay-200 {
   animation-delay: 0.3s;
 }
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}

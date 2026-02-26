@@ -1,4 +1,5 @@
 import { ArrowRight, Mail, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -132,31 +133,79 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* ABOUT */}
-          <div>
-            <h4 className="font-semibold mb-4">ABOUT MARCADSPRO</h4>
-            <ul className="space-y-2 text-sm text-white/80">
-              <li>About Us</li>
-              <li>Our Process</li>
-              <li>Case Studies</li>
-              <li>Testimonials</li>
-              <li>Careers</li>
-              <li>Contact</li>
-            </ul>
-          </div>
+          {/* Quick Links */}
+<div>
+  <h4 className="font-semibold mb-4">Quick Links</h4>
+  <ul className="space-y-2 text-sm text-white/80">
+    <li>
+      <Link to="/about" className="hover:text-orange-400 transition">
+        About Us
+      </Link>
+    </li>
+    <li>
+      <Link to="/#transformation" className="hover:text-orange-400 transition">
+        Our Process
+      </Link>
+    </li>
+    <li>
+      <Link to="/casestudies" className="hover:text-orange-400 transition">
+        Case Studies
+      </Link>
+    </li>
+    <li>
+      <Link to="/#industriessection" className="hover:text-orange-400 transition">
+        Testimonials
+      </Link>
+    </li>
+    <li>
+      <Link to="/careers" className="hover:text-orange-400 transition">
+        Careers
+      </Link>
+    </li>
+    <li>
+      <Link to="/contact" className="hover:text-orange-400 transition">
+        Contact
+      </Link>
+    </li>
+  </ul>
+</div>
 
-          {/* SERVICES */}
-          <div>
-            <h4 className="font-semibold mb-4">OUR SERVICES</h4>
-            <ul className="space-y-2 text-sm text-white/80">
-              <li>SEO Optimization</li>
-              <li>Google Ads</li>
-              <li>Social Media Marketing</li>
-              <li>Brand Strategy</li>
-              <li>Content Marketing</li>
-              <li>Web Design</li>
-            </ul>
-          </div>
+{/* SERVICES */}
+<div>
+  <h4 className="font-semibold mb-4">OUR SERVICES</h4>
+  <ul className="space-y-2 text-sm text-white/80">
+    <li>
+      <Link to="/seo" className="hover:text-orange-400 transition">
+        SEO Optimization
+      </Link>
+    </li>
+    <li>
+      <Link to="/adshoot" className="hover:text-orange-400 transition">
+        Google Ads
+      </Link>
+    </li>
+    <li>
+      <Link to="/smm" className="hover:text-orange-400 transition">
+        Social Media Marketing
+      </Link>
+    </li>
+    <li>
+      <Link to="/businessbranding" className="hover:text-orange-400 transition">
+        Brand Strategy
+      </Link>
+    </li>
+    <li>
+      <Link to="/contentmarketing" className="hover:text-orange-400 transition">
+        Content Marketing
+      </Link>
+    </li>
+    <li>
+      <Link to="/webdevelopment" className="hover:text-orange-400 transition">
+        Web Design
+      </Link>
+    </li>
+  </ul>
+</div>
         </div>
       </div>
 

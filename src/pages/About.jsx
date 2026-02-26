@@ -1,5 +1,6 @@
 import React from "react";
 import WorkingProcess from "../components/WorkingProcess";
+import FinalCTA from "../components/FinalCTA";
 
 export default function About() {
   return (
@@ -39,7 +40,7 @@ export default function About() {
               Who We Are
             </div>
 
-            <div className="flex flex-col mt-16">
+            <div className="flex flex-col mt-16 ml-6">
               <h2 className="text-8xl font-extrabold bg-gradient-to-r from-orange-500 to-indigo-600 bg-clip-text text-transparent">
                 99%
               </h2>
@@ -116,13 +117,13 @@ export default function About() {
 
         {/* Floating 3D Object */}
         <img
-          src="/assets/3d-object.png"   // replace with your image
+          src="https://img.freepik.com/free-vector/polygonal-wireframe-business-strategy-composition-with-editable-text-images-columns-arrow-shining-particles_1284-32260.jpg?uid=R162123361&ga=GA1.1.1312737827.1743758138&semt=ais_hybrid&w=740&q=80"   // replace with your image
           alt="Digital Growth"
           className="w-[380px] md:w-[460px] drop-shadow-2xl animate-float"
         />
 
         {/* 99% Glass Badge */}
-        <div className="absolute -top-24 right-0 backdrop-blur-lg bg-white/70 border border-white/40 rounded-full shadow-xl px-6 py-3 flex items-center gap-3">
+        <div className="absolute -top-12 right-0 backdrop-blur-lg bg-white/70 border border-white/40 rounded-full shadow-xl px-6 py-3 flex items-center gap-3">
           <div className="w-9 h-9 bg-green-500 text-white rounded-full flex items-center justify-center text-sm shadow-md">
             ✓
           </div>
@@ -133,7 +134,7 @@ export default function About() {
         </div>
 
         {/* Sales Glass Card */}
-        <div className="absolute -bottom-28 -left-4 backdrop-blur-xl bg-white/70 border border-white/40 rounded-xl shadow-xl p-4 w-48 hover:scale-105 transition duration-500">
+        <div className="absolute -bottom-16 -left-4 backdrop-blur-xl bg-white/70 border border-white/40 rounded-xl shadow-xl p-4 w-48 hover:scale-105 transition duration-500">
   <p className="text-[10px] text-gray-500 mb-1">Total Sales</p>
   
   <h4 className="text-lg font-bold text-gray-900">$49.000</h4>
@@ -185,7 +186,7 @@ export default function About() {
           {/* Left Image */}
           <div className="flex justify-center">
             <img
-              src="/assets/strategy-image.jpg"   // Replace with your image path
+              src="https://img.freepik.com/free-photo/3d-character-emerging-from-smartphone_23-2151336688.jpg?uid=R162123361&ga=GA1.1.1312737827.1743758138&semt=ais_hybrid&w=740&q=80"   // Replace with your image path
               alt="Strategy"
               className="rounded-2xl shadow-2xl w-full max-w-md"
             />
@@ -254,6 +255,7 @@ export default function About() {
           className="hidden md:block absolute top-10 right-10 w-24 opacity-90"
         />
       </section>
+      <FinalCTA />
     </>
   );
 }

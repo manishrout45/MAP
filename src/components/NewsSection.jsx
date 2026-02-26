@@ -36,7 +36,7 @@ export default function NewsSection() {
   ];
 
   return (
-    <section className="w-full bg-white py-24">
+    <section className="w-full bg-gray-50 py-24">
       <div className="max-w-7xl mx-auto px-6">
         {/* HEADER */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 mb-16">

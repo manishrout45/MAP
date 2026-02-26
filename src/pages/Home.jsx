@@ -8,6 +8,7 @@ import Transformation from "../components/Transformation";
 import IndustriesSection from "../components/IndustriesSection";
 import WhyChooseUs from "../components/WhyChooseUs";
 import FeaturedProjects from "../components/FeaturedProjects";
+import FinalCTA from "../components/FinalCTA";
 const Home = () => {
   useScrollFade(); // default class "fade-up"
 
@@ -19,9 +20,10 @@ const Home = () => {
       <FeaturedProjects className="fade-up" />
       <WhyChooseUs className="fade-left" />
       <IndustriesSection className="fade-right" />
-      <MeetOurTeam className="fade-up" />
+      
       <Transformation className="fade-left" />
       <NewsSection className="fade-right" />
+      <FinalCTA />
 
     </>
   );

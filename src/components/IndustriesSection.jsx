@@ -27,14 +27,16 @@ export default function IndustriesSection() {
     },
   ];
 
-  /* ================= PARTNER LOGOS (PUBLIC) ================= */
-  const partnerLogos = [
-    "/assets/partners/google.png",
-    "/assets/partners/meta.png",
-    "/assets/partners/shopify.png",
-    "/assets/partners/amazon.png",
-    "/assets/partners/analytics.png",
-  ];
+  /* ================= PARTNER LOGOS ================= */
+const partnerLogos = [
+  "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png",
+  "https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+];
 
   const [current, setCurrent] = useState(0);
 
@@ -49,23 +51,22 @@ export default function IndustriesSection() {
   }, []);
 
   return (
-    <section className="w-full py-24">
+    <section id="industriessection" className="w-full py-24">
       <div className="relative max-w-7xl mx-auto">
 
         {/* ================= GRADIENT CONTAINER ================= */}
         <div className="relative rounded-[48px] bg-gradient-to-r from-[#1F3C88] via-[#2b4aa5] to-[#14213D] px-12 pt-20 pb-60 overflow-hidden">
 
-          <div className="max-w-3xl text-white">
-            <p className="text-sm text-orange-400 mb-4 flex items-center gap-2">
+          {/* CENTERED CONTENT */}
+          <div className="max-w-3xl mx-auto text-white text-center">
+
+            <p className="text-sm text-orange-400 mb-4 flex items-center justify-center gap-2">
               <span className="w-2 h-2 bg-orange-400 rounded-full" />
-              Performance Marketing Experts
+              Clients Testimonials
             </p>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-12">
-              Driving measurable growth for brands across <br />
-              <span className="font-extrabold">
-                multiple industries worldwide
-              </span>
+              What Our Clients Say
             </h2>
 
             {/* ================= PARTNER LOGO MARQUEE ================= */}
@@ -87,6 +88,7 @@ export default function IndustriesSection() {
                 ))}
               </div>
             </div>
+
           </div>
         </div>
 

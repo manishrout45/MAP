@@ -8,6 +8,7 @@ import FloatingButtons from "./components/FloatingButtons";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import OurTeam from "./pages/OurTeam";
+import Portfolio from "./pages/Portfolio";
 import FAQ from "./pages/FAQ";
 import Blog from "./pages/Blog";
 import CaseStudies from "./pages/CaseStudies";
@@ -25,6 +26,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import GlobalCursor from "./components/GlobalCursor";
+
 
 
 
@@ -76,6 +78,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/ourteam" element={<OurTeam />} />
+        <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/casestudies" element={<CaseStudies />} />
         <Route path="/blog" element={<Blog />} />

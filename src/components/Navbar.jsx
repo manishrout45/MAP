@@ -66,7 +66,7 @@ export default function Navbar() {
             <img
               src={
                 scrolled
-                  ? "/assets/images/logo/final.png"
+                  ? "/assets/images/logo/finalww.png"
                   : "/assets/images/logo/finalww.png"
               }
               alt="Logo"

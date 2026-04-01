@@ -96,10 +96,7 @@ export default function Contact() {
                 Visit us at our Bhubaneswar office location.
               </p>
               <p className="text-gray-700">
-                Block-C, 2nd Floor, Mallick Complex,
-                Next to Hotel HHI, Shreya Chowk,
-                Unit-3, Kharvela Nagar,
-                Bhubaneswar, Odisha - 751001, India
+                2nd floor, Aangan Restaurant Side, Plot 43, Saheed Nagar, Bhubaneswar, Odisha 751007
               </p>
             </div>
 

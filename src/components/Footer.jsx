@@ -84,7 +84,7 @@ export default function Footer() {
 
             <div className="flex gap-6 text-white/80">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/marcadspromedia"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#ff5a3c] transition"
@@ -93,7 +93,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/marcadspro.media/?next=%2F&hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#ff5a3c] transition"
@@ -102,7 +102,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/78699537/admin/dashboard/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#ff5a3c] transition"
@@ -111,7 +111,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://twitter.com"
+                href="https://x.com/marcadspro"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#ff5a3c] transition"
@@ -124,12 +124,12 @@ export default function Footer() {
           {/* CONTACT */}
           <div>
             <h4 className="font-semibold mb-4">CONTACT US</h4>
-            <p className="text-sm text-white/80 mb-2">+91 94384 31918</p>
+            <p className="text-sm text-white/80 mb-2">+91 90780 90600</p>
             <p className="text-sm text-white/80">info@marcadspro.com</p>
 
             <h4 className="font-semibold mt-6 mb-3">OFFICE ADDRESS</h4>
             <p className="text-sm text-white/80 leading-relaxed">
-              India • Serving Clients Worldwide
+              2nd floor, Aangan Restaurant Side, Plot 43, Saheed Nagar, Bhubaneswar, Odisha 751007
             </p>
           </div>
 

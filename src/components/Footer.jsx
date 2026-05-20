@@ -129,7 +129,7 @@ export default function Footer() {
 
             <h4 className="font-semibold mt-6 mb-3">OFFICE ADDRESS</h4>
             <p className="text-sm text-white/80 leading-relaxed">
-              2nd floor, Aangan Restaurant Side, Plot 43, Saheed Nagar, Bhubaneswar, Odisha 751007
+              Plot No-410, near SBI Bank, Saheed Nagar, Bhubaneswar, Odisha 751007
             </p>
           </div>
 

@@ -118,10 +118,10 @@ export default function WebDevelopment() {
                   Have additional questions?
                 </h4>
                 <p className="text-sm text-gray-500 mb-3">
-                  456 Elm Avenue, Philadelphia, Pennsylvania
+                  marcadspro@gmail.com
                 </p>
                 <p className="text-xl font-bold text-[#14213D] mb-4">
-                  +91 94384 31918
+                  +91 90780 90600
                 </p>
                 <button className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition">
                   Contact Us Now
@@ -157,7 +157,7 @@ export default function WebDevelopment() {
             </div>
 
             <img
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+              src="https://img.magnific.com/premium-photo/working-it-developer-concentrating-online-software-development-information-surrounded-by-coding-application-pc-screens-creating-program-firmware-website-neon-modern-office-home-gusher_31965-275070.jpg?ga=GA1.1.367325703.1777638219&semt=ais_incoming&w=740&q=80"
               alt="Website Development"
               className="rounded-2xl shadow-xl w-full"
             />

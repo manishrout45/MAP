@@ -116,10 +116,10 @@ export default function SMM() {
                   Have additional questions?
                 </h4>
                 <p className="text-sm text-gray-500 mb-3">
-                  456 Elm Avenue, Philadelphia, Pennsylvania
+                  marcadspro@gmail.com
                 </p>
                 <p className="text-xl font-bold text-[#14213D] mb-4">
-                  +91 94384 31918
+                  +91 90780 90600
                 </p>
                 <button className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition">
                   Contact Us Now
@@ -129,7 +129,7 @@ export default function SMM() {
               {/* Promo Image */}
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1611162617474-5b21e879e113"
+                  src="https://img.magnific.com/premium-photo/business-woman-using-smart-phone-with-social-network-service-sns-social-media-concept-woman-using-laptop-computer-staying-home-online-marketing-business-social-media-business_721781-1049.jpg?ga=GA1.1.367325703.1777638219&semt=ais_incoming&w=740&q=80"
                   alt="Social Media Marketing"
                   className="w-full h-60 object-cover"
                 />
@@ -156,7 +156,7 @@ export default function SMM() {
             </div>
 
             <img
-              src="https://images.unsplash.com/photo-1611162617474-5b21e879e113"
+              src="https://img.magnific.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?ga=GA1.1.367325703.1777638219&semt=ais_incoming&w=740&q=80"
               alt="Social Media Management"
               className="rounded-2xl shadow-xl w-full"
             />

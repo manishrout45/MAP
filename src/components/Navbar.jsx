@@ -37,15 +37,17 @@ export default function Navbar() {
     { name: "FAQ", path: "/faq" },
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.innerWidth >= 1024) {
-        setScrolled(window.scrollY > 20);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+useEffect(() => {
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 20);
+  };
+
+  handleScroll();
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
   const isActive = (path) => location.pathname === path;
 
@@ -185,9 +187,14 @@ export default function Navbar() {
   Get Free Consultation
 </Link>
 
-            <button onClick={() => setOpen(true)} className="lg:hidden text-white">
-              <FiMenu size={24} />
-            </button>
+            <button
+            onClick={() => setOpen(true)}
+            className={`lg:hidden transition-colors duration-300 ${
+              scrolled ? "text-white" : "text-white"
+            }`}
+          >
+            <FiMenu size={24} />
+          </button>
           </div>
         </div>
       </header>
@@ -227,78 +234,96 @@ export default function Navbar() {
             </Link>
 
             {/* SERVICES */}
-            <div className="border-b pb-3">
-              <button
-                onClick={() => {
-                  setMobileServicesOpen(!mobileServicesOpen);
-                  setMobilePagesOpen(false);
-                }}
-                className="flex justify-between items-center w-full"
-              >
-                <span>Services</span>
-                <FiChevronDown
-                  className={`transition-transform ${
-                    mobileServicesOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
+              <div className="border-b pb-3">
+                <button
+                  onClick={() => {
+                    setMobileServicesOpen(!mobileServicesOpen);
+                    setMobilePagesOpen(false);
+                  }}
+                  className="flex justify-between items-center w-full"
+                >
+                  <span>Services</span>
 
-              {mobileServicesOpen && (
-                <div className="mt-3 ml-4 space-y-2">
-                  {servicesMenu.map((s, idx) => (
-                    <Link
-                      key={idx}
-                      to={s.path}
-                      onClick={() => setOpen(false)}
-                      className={`block text-sm ${
-                        isActive(s.path)
-                          ? "text-orange-500 font-semibold"
-                          : "text-gray-600"
-                      }`}
-                    >
-                      {s.name}
-                    </Link>
-                  ))}
+                  <FiChevronDown
+                    className={`transition-transform duration-300 ${
+                      mobileServicesOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                <div
+                  className={`grid transition-all duration-500 ease-in-out ${
+                    mobileServicesOpen
+                      ? "grid-rows-[1fr] opacity-100 mt-3"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="ml-4 space-y-3">
+                      {servicesMenu.map((s, idx) => (
+                        <Link
+                          key={idx}
+                          to={s.path}
+                          onClick={() => setOpen(false)}
+                          className={`block text-sm transition-all duration-300 hover:translate-x-1 ${
+                            isActive(s.path)
+                              ? "text-orange-500 font-semibold"
+                              : "text-gray-600"
+                          }`}
+                        >
+                          {s.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-              )}
-            </div>
+              </div>
 
             {/* PAGES */}
-            <div className="border-b pb-3">
-              <button
-                onClick={() => {
-                  setMobilePagesOpen(!mobilePagesOpen);
-                  setMobileServicesOpen(false);
-                }}
-                className="flex justify-between items-center w-full"
-              >
-                <span>Pages</span>
-                <FiChevronDown
-                  className={`transition-transform ${
-                    mobilePagesOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
+              <div className="border-b pb-3">
+                <button
+                  onClick={() => {
+                    setMobilePagesOpen(!mobilePagesOpen);
+                    setMobileServicesOpen(false);
+                  }}
+                  className="flex justify-between items-center w-full"
+                >
+                  <span>Pages</span>
 
-              {mobilePagesOpen && (
-                <div className="mt-3 ml-4 space-y-2">
-                  {pagesMenu.map((p, idx) => (
-                    <Link
-                      key={idx}
-                      to={p.path}
-                      onClick={() => setOpen(false)}
-                      className={`block text-sm ${
-                        isActive(p.path)
-                          ? "text-orange-500 font-semibold"
-                          : "text-gray-600"
-                      }`}
-                    >
-                      {p.name}
-                    </Link>
-                  ))}
+                  <FiChevronDown
+                    className={`transition-transform duration-300 ${
+                      mobilePagesOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                <div
+                  className={`grid transition-all duration-500 ease-in-out ${
+                    mobilePagesOpen
+                      ? "grid-rows-[1fr] opacity-100 mt-3"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="ml-4 space-y-3">
+                      {pagesMenu.map((p, idx) => (
+                        <Link
+                          key={idx}
+                          to={p.path}
+                          onClick={() => setOpen(false)}
+                          className={`block text-sm transition-all duration-300 hover:translate-x-1 ${
+                            isActive(p.path)
+                              ? "text-orange-500 font-semibold"
+                              : "text-gray-600"
+                          }`}
+                        >
+                          {p.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-              )}
-            </div>
+              </div>
 
             <Link
               to="/portfolio"

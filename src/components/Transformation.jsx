@@ -90,14 +90,6 @@ export default function Transformation() {
         ref={sectionRef}
         className="relative max-w-7xl mx-auto rounded-[32px] bg-gradient-to-r from-[#1F3C88] via-[#2b4aa5] to-[#14213D] overflow-hidden"
       >
-        {/* Floating Logo */}
-        <div className="absolute top-6 right-8">
-          <img
-            src="/assets/logo-u.png"
-            alt="MarcAdsPro Logo"
-            className="w-20 h-20 object-contain"
-          />
-        </div>
 
         <div className="relative z-10 max-w-5xl mx-auto text-center text-white py-20">
 
@@ -141,24 +133,27 @@ export default function Transformation() {
           </div>
 
           {/* STATS WITH ANIMATION */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-left">
-            {stats.map((stat, index) => (
-              <div key={index} className="group">
-                <div className="relative h-[1px] w-full mb-6 overflow-hidden bg-white/25">
-                  <span className="absolute left-0 top-0 h-full w-0 bg-orange-400 transition-all duration-700 ease-out group-hover:w-full" />
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 text-center md:text-left px-6 md:px-0">
+              {stats.map((stat, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/5 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none rounded-2xl p-5 md:p-0 border border-white/10 md:border-0"
+                >
+                  <div className="relative h-[1px] w-full mb-4 md:mb-6 overflow-hidden bg-white/25">
+                    <span className="absolute left-0 top-0 h-full w-0 bg-orange-400 transition-all duration-700 ease-out group-hover:w-full" />
+                  </div>
+
+                  <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight group-hover:text-orange-400 transition-colors">
+                    {formatNumber(counts[index])}
+                    {stat.suffix}
+                  </h3>
+
+                  <p className="text-sm sm:text-base md:text-lg text-white/80 mt-2 md:mt-3 leading-relaxed">
+                    {stat.label}
+                  </p>
                 </div>
-
-                <h3 className="text-5xl md:text-6xl font-bold tracking-tight group-hover:text-orange-400 transition-colors">
-                  {formatNumber(counts[index])}
-                  {stat.suffix}
-                </h3>
-
-                <p className="text-base md:text-lg text-white/80 mt-3">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
         </div>
       </div>

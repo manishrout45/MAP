@@ -118,10 +118,10 @@ export default function ContentMarketing() {
                   Have additional questions?
                 </h4>
                 <p className="text-sm text-gray-500 mb-3">
-                  456 Elm Avenue, Philadelphia, Pennsylvania
+                  marcadspro@gmail.com
                 </p>
                 <p className="text-xl font-bold text-[#14213D] mb-4">
-                  +91 94384 31918
+                  +91 90780 90600
                 </p>
                 <button className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition">
                   Contact Us Now
@@ -131,7 +131,7 @@ export default function ContentMarketing() {
               {/* Promo Image */}
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+                  src="https://img.magnific.com/free-photo/media-marketing-internet-digital-global_53876-138500.jpg?ga=GA1.1.367325703.1777638219&semt=ais_incoming&w=740&q=80"
                   alt="Content Marketing"
                   className="w-full h-60 object-cover"
                 />
@@ -158,7 +158,7 @@ export default function ContentMarketing() {
             </div>
 
             <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+              src="https://img.magnific.com/free-photo/worker-reading-news-with-tablet_1162-83.jpg?ga=GA1.1.367325703.1777638219&semt=ais_incoming&w=740&q=80"
               alt="Content Marketing"
               className="rounded-2xl shadow-xl w-full"
             />

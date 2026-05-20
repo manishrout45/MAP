@@ -5,7 +5,7 @@ export default function FeaturedProjects() {
     {
       id: 1,
       type: "video",
-      src: "/assets/case-study-clinic.mp4", // Replace with real snapshot video if available
+      src: "/assets/1472221_People_Medical_1280x720.mp4", // Replace with real snapshot video if available
       title: "Local Multi-Specialty Clinic – 200% Lead Growth",
       desc:
         "Problem: The clinic was struggling with low appointment bookings and high cost per lead.\n\nSolution: We restructured Google & Meta Ads campaigns, optimized landing pages, and implemented precise conversion tracking.\n\nResults: +200% leads in 90 days | 4X ROAS | -35% Cost Per Lead.",
@@ -19,7 +19,7 @@ export default function FeaturedProjects() {
     {
       id: 2,
       type: "image",
-      src: "https://img.freepik.com/free-photo/decorated-wedding-hall-with-candles-round-tables-centerpieces_8353-10057.jpg?uid=R162123361&ga=GA1.1.1312737827.1743758138&semt=ais_user_personalization&w=740&q=80", // Use real performance chart image
+      src: "https://i.pinimg.com/originals/60/4b/7c/604b7c5e0854ca82a80a95e49deda0f3.jpg", // Use real performance chart image
       title: "Event Management Brand – 3.5X ROI in 4 Months",
       desc:
         "Problem: The business faced inconsistent inquiries and low brand visibility.\n\nSolution: We launched precision-targeted ad funnels, remarketing campaigns, and SEO optimization for high-intent keywords.\n\nResults: +180% inquiries | Top 10 ranking for key wedding term | 3.5X ROI.",

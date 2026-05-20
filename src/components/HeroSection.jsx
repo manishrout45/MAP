@@ -78,26 +78,85 @@ export default function HeroSection() {
               <div className="relative w-full max-w-xl">
 
                 <img
-                  src="https://img.freepik.com/premium-photo/complex-business-application-website-with-statistic-infographic-design-aig53_31965-597884.jpg?uid=R162123361&ga=GA1.1.1312737827.1743758138&semt=ais_user_personalization&w=740&q=80"
+                  src="/assets/images/HeroImg.png"
                   alt="Marketing Analytics Dashboard"
-                  className="rounded-3xl shadow-2xl border border-white/10"
+                  className="rounded-3xl "
                 />
+                {/* Floating Stats Cards */}
+<div className="absolute -top-6 -left-4 hidden md:block z-20">
+  <div className="relative bg-white/95 backdrop-blur-xl border border-white/40 shadow-xl rounded-[20px] px-4 py-4 min-w-[180px]">
 
-                <div className="absolute -top-8 -left-8 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl px-6 py-5 hidden md:block">
-                  <p className="text-xs text-gray-500 mb-1">Ad Performance</p>
-                  <p className="text-2xl font-bold text-blue-600">+245%</p>
-                  <p className="text-xs text-green-500 mt-1">
-                    ↑ 38% this quarter
-                  </p>
-                </div>
+    {/* Glow */}
+    <div className="absolute inset-0 rounded-[20px] bg-gradient-to-br from-blue-500/10 to-cyan-400/10"></div>
 
-                <div className="absolute -bottom-8 -right-8 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl px-6 py-5 hidden md:block">
-                  <p className="text-xs text-gray-500 mb-1">Conversion Rate</p>
-                  <p className="text-2xl font-bold text-green-600">4.8%</p>
-                  <p className="text-xs text-gray-500 mt-1">
-                    Optimized funnel
-                  </p>
-                </div>
+
+    {/* Message Tail */}
+<div className="absolute -bottom-2 left-8 w-4 h-4 bg-white/95 rotate-45 "></div>
+
+    <div className="relative z-10">
+      <div className="flex items-center justify-between mb-2">
+        <div>
+          <p className="text-[10px] uppercase tracking-wide text-gray-400 font-medium">
+            Ad Performance
+          </p>
+          <h3 className="text-2xl font-extrabold text-blue-600 leading-none mt-1">
+            +245%
+          </h3>
+        </div>
+
+        <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center shadow-inner text-sm">
+          📈
+        </div>
+      </div>
+
+      <div className="flex items-center gap-2 mt-2">
+        <span className="px-2 py-0.5 rounded-full bg-green-100 text-green-600 text-[10px] font-semibold">
+          ↑ 38%
+        </span>
+        <p className="text-[10px] text-gray-500">
+          this quarter
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div className="absolute -bottom-6 -right-4 hidden md:block z-20">
+  <div className="relative bg-white/95 backdrop-blur-xl border border-white/40 shadow-xl rounded-[20px] px-4 py-4 min-w-[180px]">
+
+    {/* Glow */}
+    <div className="absolute inset-0 rounded-[20px] bg-gradient-to-br from-green-500/10 to-emerald-400/10"></div>
+
+    {/* Message Tail */}
+<div className="absolute -top-2 right-8 w-4 h-4 bg-white/95 rotate-45 "></div>
+
+    <div className="relative z-10">
+      <div className="flex items-center justify-between mb-2">
+        <div>
+          <p className="text-[10px] uppercase tracking-wide text-gray-400 font-medium">
+            Conversion
+          </p>
+          <h3 className="text-2xl font-extrabold text-green-600 leading-none mt-1">
+            4.8%
+          </h3>
+        </div>
+
+        <div className="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center shadow-inner text-sm">
+          🚀
+        </div>
+      </div>
+
+      <div className="flex items-center gap-2 mt-2">
+        <span className="px-2 py-0.5 rounded-full bg-blue-100 text-blue-600 text-[10px] font-semibold">
+          Optimized
+        </span>
+        <p className="text-[10px] text-gray-500">
+          funnel
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
               </div>
             </div>

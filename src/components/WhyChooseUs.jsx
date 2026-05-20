@@ -101,7 +101,7 @@ export default function WhyChooseUs() {
             <div className="relative">
 
               <img
-                src="https://img.freepik.com/free-photo/handsome-smiling-young-man-pointing-finger_171337-17141.jpg"
+                src="https://img.magnific.com/free-photo/businessman-black-suit-pointing-up_114579-18996.jpg?ga=GA1.1.367325703.1777638219&semt=ais_incoming&w=740&q=80"
                 alt="Marketing Expert"
                 className="
                   w-[240px] h-[240px]
@@ -147,7 +147,7 @@ export default function WhyChooseUs() {
               <div className="relative overflow-hidden mt-10 sm:mt-16 rounded-[40px] lg:rounded-[50px] shadow-2xl border border-white/30">
 
                 <img
-                  src="/assets/images/HowweWork.png"
+                  src="https://img.magnific.com/free-photo/business-people-examining-statistics-laptop-research-financial-growth-team-women-working-marketing-productivity-organization-development-successful-project_482257-33929.jpg?ga=GA1.1.367325703.1777638219&semt=ais_incoming&w=740&q=80"
                   alt="Marketing Strategy"
                   className="w-full h-[260px] sm:h-[320px] lg:h-[420px] object-cover"
                 />

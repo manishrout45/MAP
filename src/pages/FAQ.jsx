@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const faqData = [
   {
@@ -71,7 +72,7 @@ export default function FAQ() {
           </h1>
 
           <div className="flex justify-center items-center gap-3 text-white/80 text-sm md:text-base">
-            <span className="hover:text-white cursor-pointer">Homepage</span>
+            <Link to="/" className="hover:text-white cursor-pointer">Homepage</Link>
             <span>›</span>
             <span className="text-white font-medium">FAQ</span>
           </div>

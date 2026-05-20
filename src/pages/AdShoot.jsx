@@ -116,10 +116,10 @@ export default function AdShoot() {
                   Have additional questions?
                 </h4>
                 <p className="text-sm text-gray-500 mb-3">
-                  456 Elm Avenue, Philadelphia, Pennsylvania
+                  marcadspro@gmail.com
                 </p>
                 <p className="text-xl font-bold text-[#14213D] mb-4">
-                  +91 94384 31918
+                  +91 90780 90600
                 </p>
                 <button className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition">
                   Contact Us Now
@@ -129,7 +129,7 @@ export default function AdShoot() {
               {/* Promo Image */}
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+                  src="https://img.magnific.com/free-photo/handsome-young-blogger-recording-station_1303-21990.jpg?ga=GA1.1.367325703.1777638219&semt=ais_incoming&w=740&q=80"
                   alt="Ad Shoot"
                   className="w-full h-60 object-cover"
                 />
@@ -154,7 +154,7 @@ export default function AdShoot() {
             </div>
 
             <img
-              src="https://images.unsplash.com/photo-1492724441997-5dc865305da7"
+              src="https://img.magnific.com/premium-photo/professional-photographer-taking-picture-young-woman-having-photoshoot-studio-with-lighting_116547-57594.jpg?ga=GA1.1.367325703.1777638219&semt=ais_incoming&w=740&q=80"
               alt="Corporate Shoot"
               className="rounded-2xl shadow-xl w-full"
             />

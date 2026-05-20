@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Portfolio() {
   const projects = [
@@ -57,9 +58,9 @@ export default function Portfolio() {
           </h1>
 
           <div className="flex justify-center items-center gap-3 text-white/80 text-sm md:text-base">
-            <span className="hover:text-white cursor-pointer">
+            <Link to="/" className="hover:text-white cursor-pointer">
               Homepage
-            </span>
+            </Link>
             <span>›</span>
             <span className="text-white font-medium">
               Portfolio

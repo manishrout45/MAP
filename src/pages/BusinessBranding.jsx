@@ -114,10 +114,10 @@ export default function BusinessBranding() {
                   Have additional questions?
                 </h4>
                 <p className="text-sm text-gray-500 mb-3">
-                  456 Elm Avenue, Philadelphia, Pennsylvania
+                  marcadspro@gmail.com
                 </p>
                 <p className="text-xl font-bold text-[#14213D] mb-4">
-                  +91 94384 31918
+                  +91 90780 90600
                 </p>
                 <button className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition">
                   Contact Us Now
@@ -127,7 +127,7 @@ export default function BusinessBranding() {
               {/* Promo Image */}
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1556761175-b413da4baf72"
+                  src="https://img.magnific.com/premium-photo/businessman-suit-building-from-wooden-blocks-brand-concept_389076-209.jpg?ga=GA1.1.367325703.1777638219&semt=ais_incoming&w=740&q=80"
                   alt="Business Branding"
                   className="w-full h-60 object-cover"
                 />
@@ -153,7 +153,7 @@ export default function BusinessBranding() {
             </div>
 
             <img
-              src="https://images.unsplash.com/photo-1529336953121-a0ce3f5f1b3d"
+              src="https://img.magnific.com/premium-photo/side-view-businessman-analyzing-chart_107420-93378.jpg?ga=GA1.1.367325703.1777638219&semt=ais_incoming&w=740&q=80"
               alt="Brand Strategy"
               className="rounded-2xl shadow-xl w-full"
             />

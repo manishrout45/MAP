@@ -112,10 +112,10 @@ export default function SEO() {
                   Have additional questions?
                 </h4>
                 <p className="text-sm text-gray-500 mb-3">
-                  456 Elm Avenue, Philadelphia, Pennsylvania
+                  marcadspro@gmail.com
                 </p>
                 <p className="text-xl font-bold text-[#14213D] mb-4">
-                  +91 94384 31918
+                  +91 90780 90600
                 </p>
                 <button className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition">
                   Contact Us Now
@@ -125,7 +125,7 @@ export default function SEO() {
               {/* Promo Image */}
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
+                  src="https://img.magnific.com/free-photo/hand-arrange-white-letters-as-seo_1384-119.jpg?ga=GA1.1.367325703.1777638219&semt=ais_incoming&w=740&q=80"
                   alt="SEO Services"
                   className="w-full h-60 object-cover"
                 />
@@ -150,7 +150,7 @@ export default function SEO() {
             </div>
 
             <img
-              src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07"
+              src="https://img.magnific.com/premium-photo/seo-search-engine-optimization-modish-ecommerce-online-retail-business_31965-282388.jpg?ga=GA1.1.367325703.1777638219&semt=ais_incoming&w=740&q=80"
               alt="Search Engine Optimization"
               className="rounded-2xl shadow-xl w-full"
             />

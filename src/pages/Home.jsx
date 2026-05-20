@@ -20,7 +20,6 @@ const Home = () => {
       <FeaturedProjects className="fade-up" />
       <WhyChooseUs className="fade-left" />
       <IndustriesSection className="fade-right" />
-      
       <Transformation className="fade-left" />
       <NewsSection className="fade-right" />
       <FinalCTA />

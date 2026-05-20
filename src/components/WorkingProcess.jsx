@@ -6,28 +6,28 @@ const steps = [
     title: "Research & Strategy",
     desc:
       "We analyze your business goals, target audience, and competitors to craft a data-driven marketing strategy that delivers real results.",
-    img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+    img: "https://img.magnific.com/premium-photo/top-down-aerial-view-business-people-sharing-marketing-idea-directorate_31965-366124.jpg?ga=GA1.1.367325703.1777638219&semt=ais_incoming&w=740&q=80",
   },
   {
     num: "02",
     title: "Planning & Setup",
     desc:
       "Our team creates a structured execution plan, selects the right channels, and sets up tools to ensure smooth campaign performance.",
-    img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+    img: "https://img.magnific.com/free-photo/caucasian-woman-african-american-guy-creating-new-design-writing-paper_74855-8846.jpg?ga=GA1.1.367325703.1777638219&semt=ais_incoming&w=740&q=80",
   },
   {
     num: "03",
     title: "Execution",
     desc:
       "We launch and manage campaigns with precision, continuously monitoring performance to maximize engagement and conversions.",
-    img: "https://images.unsplash.com/photo-1552664730-d307ca884978",
+    img: "https://img.magnific.com/premium-photo/startup-concept-with-icon-business-network-connection-modern-virtual-interface-from-digital-tablet-people-hand-touching-tablet-developing-improving-organization-with-modern-technology_721781-586.jpg?ga=GA1.1.367325703.1777638219&semt=ais_incoming&w=740&q=80",
   },
   {
     num: "04",
     title: "Optimization",
     desc:
       "Using real-time data, we optimize ads, content, and funnels to improve ROI and achieve sustainable business growth.",
-    img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7",
+    img: "https://img.magnific.com/premium-photo/seo-digital-marketing-concept-search-engine-optimization_1101054-71383.jpg?ga=GA1.1.367325703.1777638219&semt=ais_incoming&w=740&q=80",
   },
 ];
 

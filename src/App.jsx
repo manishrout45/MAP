@@ -10,6 +10,7 @@ import About from "./pages/About";
 import OurTeam from "./pages/OurTeam";
 import Portfolio from "./pages/Portfolio";
 import FAQ from "./pages/FAQ";
+import Career from "./pages/Career";
 import Blog from "./pages/Blog";
 import CaseStudies from "./pages/CaseStudies";
 import Contact from "./pages/Contact";
@@ -80,6 +81,7 @@ function App() {
         <Route path="/ourteam" element={<OurTeam />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/career" element={<Career />} />
         <Route path="/casestudies" element={<CaseStudies />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />

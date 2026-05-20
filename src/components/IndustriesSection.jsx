@@ -1,149 +1,159 @@
 import React, { useEffect, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { FaQuoteLeft } from "react-icons/fa6";
 
 export default function IndustriesSection() {
-  /* ================= TESTIMONIAL DATA ================= */
   const testimonials = [
     {
       text:
-        "MarcAdsPro transformed our ad performance across Google and Meta. Data-driven approach helped us scale with a lower cost per acquisition.",
-      name: "Aarav Mehta",
-      role: "E-commerce Founder",
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
+        "MarcAdsPro Media has been amazing to work with. Their team is professional, creative, and delivers great results in social media, SEO, and online growth. Highly recommended.",
+      name: "Anup Dhal",
+      role: "Business Owner",
+      image:
+        "https://img.magnific.com/premium-vector/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-vector-illustration_561158-3383.jpg?semt=ais_hybrid&w=740&q=80",
     },
     {
       text:
-        "From strategy to execution, Marcads Pro team delivered consistent leads and clear ROI reporting. Highly recommended for growth-focused brands.",
-      name: "Sophia Williams",
-      role: "Marketing Director",
-      image: "https://randomuser.me/api/portraits/women/44.jpg",
+        "My experience with MarcAdsPro Media has been great. Their performance marketing service helped my store generate huge leads. Highly thankful to their team.",
+      name: "Mihir Ranajan Mohanty",
+      role: "Shop Owner",
+      image:
+        "https://img.magnific.com/premium-vector/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-vector-illustration_561158-3383.jpg?semt=ais_hybrid&w=740&q=80",
     },
     {
       text:
-        "Their performance marketing expertise helped us dominate our niche. Every campaign was optimized for conversions, not just clicks.",
-      name: "Daniel Foster",
-      role: "Startup CEO",
-      image: "https://randomuser.me/api/portraits/men/75.jpg",
+        "They are best in gmb.",
+      name: "Satyajit Mohapatra",
+      role: "Business Owner",
+      image:
+        "https://img.magnific.com/premium-vector/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-vector-illustration_561158-3383.jpg?semt=ais_hybrid&w=740&q=80",
     },
   ];
 
-  /* ================= PARTNER LOGOS ================= */
-const partnerLogos = [
-  "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png",
-  "https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-];
+  const partnerLogos = [
+    "/assets/images/clientLogo/B4ULogo.png",
+    "/assets/images/clientLogo/AnLoungeLogo.png",
+    "/assets/images/clientLogo/GraceHomesLogo.png",
+    "/assets/images/clientLogo/PillanceLogo.png",
+    "/assets/images/clientLogo/RidleypubLogo.png",
+    "/assets/images/clientLogo/DrSangramLogo.png",
+    "/assets/images/clientLogo/HillSideAquaLogo.png",
+  ];
 
   const [current, setCurrent] = useState(0);
 
-  const next = () => setCurrent((p) => (p + 1) % testimonials.length);
-  const prev = () =>
-    setCurrent((p) => (p === 0 ? testimonials.length - 1 : p - 1));
+  const next = () => {
+    setCurrent((prev) => (prev + 1) % testimonials.length);
+  };
 
-  /* Auto slide */
+  const prev = () => {
+    setCurrent((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1
+    );
+  };
+
   useEffect(() => {
-    const timer = setInterval(next, 5000);
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+
     return () => clearInterval(timer);
-  }, []);
+  }, [testimonials.length]);
 
   return (
-    <section id="industriessection" className="w-full py-24">
+    <section id="industriessection" className="w-full pt-16 md:pt-24 pb-48 md:pb-28 px-4">
       <div className="relative max-w-7xl mx-auto">
 
-        {/* ================= GRADIENT CONTAINER ================= */}
-        <div className="relative rounded-[48px] bg-gradient-to-r from-[#1F3C88] via-[#2b4aa5] to-[#14213D] px-12 pt-20 pb-60 overflow-hidden">
+        {/* ================= TOP BLUE CONTAINER ================= */}
+        <div className="relative rounded-[28px] md:rounded-[48px] bg-gradient-to-r from-[#1F3C88] via-[#2b4aa5] to-[#14213D] px-5 md:px-12 pt-12 md:pt-20 pb-40 md:pb-60 overflow-hidden">
 
-          {/* CENTERED CONTENT */}
           <div className="max-w-3xl mx-auto text-white text-center">
-
-            <p className="text-sm text-orange-400 mb-4 flex items-center justify-center gap-2">
+            <p className="text-xs md:text-sm text-orange-400 mb-3 md:mb-4 flex items-center justify-center gap-2">
               <span className="w-2 h-2 bg-orange-400 rounded-full" />
               Clients Testimonials
             </p>
 
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight mb-8 md:mb-12">
               What Our Clients Say
             </h2>
 
-            {/* ================= PARTNER LOGO MARQUEE ================= */}
+            {/* ================= MARQUEE LOGOS ================= */}
             <div className="relative overflow-hidden">
-              <div className="flex w-max items-center gap-16 animate-marquee">
+              <div className="flex w-max items-center gap-8 md:gap-16 animate-marquee">
                 {[...partnerLogos, ...partnerLogos].map((logo, i) => (
                   <img
                     key={i}
                     src={logo}
                     alt="marketing-partner"
-                    className="
-                      h-8 md:h-10
-                      object-contain
-                      opacity-80
-                      hover:opacity-100
-                      transition
-                    "
+                    className="h-14 sm:h-7 md:h-14 object-contain opacity-80 hover:opacity-100 transition"
                   />
                 ))}
               </div>
             </div>
-
           </div>
         </div>
 
-        {/* ================= TESTIMONIAL ================= */}
-        <div className="absolute left-1/2 -bottom-24 -translate-x-1/2 w-full max-w-4xl">
-          <div className="bg-gray-100 rounded-[28px] p-10 shadow-xl relative overflow-hidden">
+        {/* ================= TESTIMONIAL CARD ================= */}
+        <div className="absolute left-1/2 -bottom-60 md:-bottom-24  -translate-x-1/2 w-[94%] md:w-full max-w-4xl">
+          <div className="bg-gray-100 rounded-[24px] md:rounded-[28px] p-5 sm:p-6 md:p-10 shadow-xl relative overflow-hidden">
 
-            {/* Quote */}
-            <div className="absolute left-10 top-10">
-              <div className="w-16 h-16 rounded-full bg-orange-500 flex items-center justify-center text-white text-3xl font-bold">
-                “
+            {/* MOBILE = COLUMN / DESKTOP = ROW */}
+            <div className="flex flex-col md:flex-row gap-5 md:gap-8 items-start">
+
+              {/* QUOTE ICON */}
+              <div className="flex-shrink-0 mx-auto md:mx-0">
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-orange-500 flex items-center justify-center">
+                  <FaQuoteLeft className="text-blue-900 text-lg md:text-2xl" />
+                </div>
               </div>
-            </div>
 
-            {/* Slides */}
-            <div className="relative h-[160px] overflow-hidden">
-              <div
-                className="flex transition-transform duration-700 ease-in-out"
-                style={{ transform: `translateX(-${current * 100}%)` }}
-              >
-                {testimonials.map((t, i) => (
-                  <div key={i} className="min-w-full pl-28 pr-6">
-                    <p className="text-lg md:text-xl font-semibold text-gray-900">
-                      {t.text}
-                    </p>
+              {/* TESTIMONIAL SLIDER */}
+              <div className="flex-1 overflow-hidden w-full">
+                <div
+                  className="flex transition-transform duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)]"
+                  style={{ transform: `translateX(-${current * 100}%)` }}
+                >
+                  {testimonials.map((t, i) => (
+                    <div key={i} className="min-w-full">
+                      <p className="text-sm sm:text-base md:text-lg font-semibold text-gray-900 leading-relaxed text-center md:text-left">
+                        {t.text}
+                      </p>
 
-                    <div className="mt-8 border-t pt-6 flex items-center gap-4">
-                      <img
-                        src={t.image}
-                        alt={t.name}
-                        className="w-12 h-12 rounded-full object-cover"
-                      />
-                      <div>
-                        <p className="font-semibold text-gray-900">{t.name}</p>
-                        <p className="text-sm text-gray-500">{t.role}</p>
+                      <div className="mt-6 md:mt-8 border-t pt-5 md:pt-6 flex items-center justify-center md:justify-start gap-4">
+                        <img
+                          src={t.image}
+                          alt={t.name}
+                          className="w-11 h-11 md:w-12 md:h-12 rounded-full object-cover"
+                        />
+                        <div>
+                          <p className="font-semibold text-sm md:text-base text-gray-900">
+                            {t.name}
+                          </p>
+                          <p className="text-xs md:text-sm text-gray-500">
+                            {t.role}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
 
-            {/* Arrows */}
-            <div className="absolute bottom-6 right-8 flex gap-3">
+            {/* BUTTONS */}
+            <div className="mt-6 md:mt-0 md:absolute md:bottom-6 md:right-8 flex justify-center md:justify-end gap-3">
               <button
                 onClick={prev}
-                className="w-10 h-10 rounded-full border bg-white hover:bg-gray-200 flex items-center justify-center"
+                className="w-9 h-9 md:w-10 md:h-10 rounded-full border bg-white hover:bg-gray-200 flex items-center justify-center transition"
               >
-                <ArrowLeft size={18} />
+                <ArrowLeft size={16} />
               </button>
+
               <button
                 onClick={next}
-                className="w-10 h-10 rounded-full border bg-white hover:bg-gray-200 flex items-center justify-center"
+                className="w-9 h-9 md:w-10 md:h-10 rounded-full border bg-white hover:bg-gray-200 flex items-center justify-center transition"
               >
-                <ArrowRight size={18} />
+                <ArrowRight size={16} />
               </button>
             </div>
 
@@ -151,15 +161,20 @@ const partnerLogos = [
         </div>
       </div>
 
-      {/* ================= MARQUEE ANIMATION ================= */}
+      {/* ================= MARQUEE KEYFRAME ================= */}
       <style>
         {`
           @keyframes marquee {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
+            from {
+              transform: translateX(0);
+            }
+            to {
+              transform: translateX(-50%);
+            }
           }
+
           .animate-marquee {
-            animation: marquee 24s linear infinite;
+            animation: marquee 22s linear infinite;
           }
         `}
       </style>

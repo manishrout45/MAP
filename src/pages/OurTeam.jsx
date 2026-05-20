@@ -1,5 +1,6 @@
 import React from "react";
 import MeetOurTeam from "../components/MeetOurTeam";
+import { Link } from "react-router-dom";
 export default function OurTeam() {
   return (
     <>
@@ -11,7 +12,7 @@ export default function OurTeam() {
           </h1>
 
           <div className="flex justify-center items-center gap-3 text-white/80 text-sm md:text-base">
-            <span className="hover:text-white cursor-pointer">Homepage</span>
+            <Link to="/" className="hover:text-white cursor-pointer">Homepage</Link>
             <span>›</span>
             <span className="text-white font-medium">OurTeam</span>
           </div>

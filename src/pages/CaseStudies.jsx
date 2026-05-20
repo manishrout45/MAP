@@ -1,6 +1,7 @@
 import React from "react";
 import FeaturedProjects from "../components/FeaturedProjects";
 import FinalCTA from "../components/FinalCTA";
+import { Link } from "react-router-dom";
 
 export default function CaseStudies() {
   return (
@@ -13,7 +14,7 @@ export default function CaseStudies() {
           </h1>
 
           <div className="flex justify-center items-center gap-3 text-white/80 text-sm md:text-base">
-            <span className="hover:text-white cursor-pointer">Homepage</span>
+            <Link to="/" className="hover:text-white cursor-pointer">Homepage</Link>
             <span>›</span>
             <span className="text-white font-medium">Case Studies</span>
           </div>

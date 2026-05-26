@@ -180,7 +180,7 @@ useEffect(() => {
   className={`hidden lg:inline-block px-5 py-2 rounded-full border text-sm transition
   ${
     scrolled
-      ? "border-black/30 text-black hover:bg-black hover:text-white"
+      ? "border-white/30 text-white hover:bg-white hover:text-black"
       : "border-white/30 text-white hover:bg-white hover:text-black"
   }`}
 >

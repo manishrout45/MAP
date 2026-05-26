@@ -125,7 +125,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">CONTACT US</h4>
             <p className="text-sm text-white/80 mb-2">+91 90780 90600</p>
-            <p className="text-sm text-white/80">info@marcadspro.com</p>
+            <p className="text-sm text-white/80">marcadspro@gmail.com</p>
 
             <h4 className="font-semibold mt-6 mb-3">OFFICE ADDRESS</h4>
             <p className="text-sm text-white/80 leading-relaxed">

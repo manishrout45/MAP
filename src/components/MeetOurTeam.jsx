@@ -34,7 +34,7 @@ export default function MeetOurTeam() {
       empId: "MAP/EMP/002",
       joining: "16th Oct 2024",
       image:
-        "/assets/images/OurTeam/Sambit.png",
+        "/assets/images/OurTeam/Profile.png",
 
       social: {
         facebook: "https://facebook.com/",
@@ -51,7 +51,7 @@ export default function MeetOurTeam() {
       empId: "MAP/EMP/003",
       joining: "4th Nov 2024",
       image:
-        "/assets/images/OurTeam/Olive.png",
+        "/assets/images/OurTeam/Profile.png",
 
       social: {
         facebook: "https://facebook.com/",
@@ -136,7 +136,7 @@ export default function MeetOurTeam() {
       empId: "MAP/EMP/008",
       joining: "1st June 2025",
       image:
-        "/assets/images/OurTeam/Swagatika.png",
+        "/assets/images/OurTeam/Profile.png",
 
       social: {
         facebook: "https://facebook.com/",

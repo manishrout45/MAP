@@ -80,7 +80,7 @@ export default function HeroSection() {
                 <img
                   src="/assets/images/HeroImg.png"
                   alt="Marketing Analytics Dashboard"
-                  className="rounded-3xl "
+                  className="rounded-3xl  "
                 />
                 {/* Floating Stats Cards */}
 <div className="absolute -top-6 -left-4 hidden md:block z-20">

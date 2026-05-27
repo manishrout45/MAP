@@ -12,6 +12,7 @@ import Portfolio from "./pages/Portfolio";
 import FAQ from "./pages/FAQ";
 import Career from "./pages/Career";
 import Blog from "./pages/Blog";
+import BlogDetails from "./pages/BlogDetails";
 import CaseStudies from "./pages/CaseStudies";
 import Contact from "./pages/Contact";
 import ContentMarketing from "./pages/ContentMarketing";
@@ -84,6 +85,7 @@ function App() {
         <Route path="/career" element={<Career />} />
         <Route path="/casestudies" element={<CaseStudies />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/contentmarketing" element={<ContentMarketing />} />
         <Route path="/adshoot" element={<AdShoot />} />
